@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetelestai - Coffee & Comfort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8f5;
+            color: #5c4033;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background-color: #faf8f5;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            color: #6b4423;
+            margin-bottom: 10px;
+            letter-spacing: 8px;
+        }
+        
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: #8b6914;
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+        
+        .hero-text {
+            font-size: 1.5rem;
+            color: #6b4423;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .verse {
+            font-style: italic;
+            color: #8b7355;
+            margin-bottom: 30px;
+        }
+        
+        .delivery-badge {
+            display: inline-block;
+            background-color: #6b4423;
+            color: #faf8f5;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #6b4423;
+            font-weight: 400;
+        }
+        
+        /* Products Grid */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .product-card {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: #6b4423;
+            margin-bottom: 10px;
+        }
+        
+        .product-card p {
+            color: #8b7355;
+            font-size: 0.95rem;
+        }
+        
+        /* Anchor Section */
+        .anchor {
+            background-color: #f5f0e8;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .anchor h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: #6b4423;
+            margin-bottom: 20px;
+        }
+        
+        .anchor-quote {
+            font-size: 1.3rem;
+            color: #8b6914;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .anchor-text {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #5c4033;
+        }
+        
+        /* Delivery Section */
+        .delivery {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .delivery h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #6b4423;
+            margin-bottom: 30px;
+        }
+        
+        .delivery-info {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .info-item h4 {
+            color: #6b4423;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .info-item p {
+            color: #8b7355;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f5f0e8;
+            color: #8b7355;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo { font-size: 2.5rem; }
+            .products { grid-template-columns: 1fr; }
+            .delivery-info { gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="logo">TE</div>
+            <div class="tagline">ΤΕΤΕΛΕΣΤΑΙ</div>
+            <p class="hero-text">You are enough.</p>
+            <p class="verse">"It is finished." — John 19:30</p>
+            <div class="delivery-badge">🛵 We deliver to you · Lagos, Nigeria</div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <div class="container">
+        <div class="section-header">
+            <h2>Crafted for Your Peace</h2>
+        </div>
+        
+        <div class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="Premium Coffee">
+                <h3>Premium Coffee</h3>
+                <p>Carefully sourced and expertly brewed — each cup is an invitation to pause and be present.</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400" alt="Natural Beverages">
+                <h3>Natural Beverages</h3>
+                <p>Refreshing blends of natural ingredients crafted to nourish your body and calm your mind.</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400" alt="Fresh Baked Goods">
+                <h3>Fresh Baked Goods</h3>
+                <p>Warm, freshly baked treats made with love — the perfect companion to your moment of rest.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Anchor Section -->
+    <section class="anchor">
+        <div class="container">
+            <h2>IT IS FINISHED</h2>
+            <p class="anchor-quote">"It is finished."</p>
+            <p class="anchor-text">You don't have to earn rest. You are already enough. Every cup we make carries this gentle reminder.</p>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section class="delivery">
+        <div class="container">
+            <h2>We Come to You</h2>
+            <p>No physical store — we deliver your order straight to your door across Lagos.</p>
+            
+            <div class="delivery-info">
+                <div class="info-item">
+                    <h4>Delivery Area</h4>
+                    <p>Lagos, Nigeria</p>
+                </div>
+                <div class="info-item">
+                    <h4>Order Hours</h4>
+                    <p>Mon-Fri: 7AM - 4PM<br>Sat: 9AM - 2PM<br>Sun: Closed</p>
+                </div>
+            </div>
+            
+            <a href="https://wa.me/+234903563458" class="whatsapp-btn">Order via WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tetelestai. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
